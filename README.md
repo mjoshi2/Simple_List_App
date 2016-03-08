@@ -1,5 +1,5 @@
 # Simple_List_App
-This repository contains 4 files-/n
+This repository contains 4 files-
 1) flaskapp.py
 This is the application program developed using Flask and python, running on the server.
 2) script.py
