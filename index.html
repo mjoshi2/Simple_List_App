@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Simple List App</title>
+</head>
+
+<body style="background-color: white">
+ <h1 style="color: green; font-family: Arial; text-align:center"><strong>WELCOME TO THE LIST APP</strong></h1>
+
+  <h3 style="font-size 20px; font-family: Arial; color: red; text-align:center">Let this app remember your lists for you so that you can concentrate on finishing the tasks!</h3>
+
+   <p style="text-align:center"> <img src="http://cdn1.theodysseyonline.com/files/2016/01/14/635883812575553414258510417_Checklists.jpg"> </p>
+   
+    <ul style='text-align:center'>This app will gives you:
+     <li>Easy way to save your list of daily to-do items</li>
+     <li>Simple UI with which you can Add or Delete any item without trouble</li>
+     <li>View of your most current and updated list in a sequential order</li>
+    </ul>
+
+    <p></p>
+    <p></p>
+    <a href="{{ url_for('show_entries') }}">Show My Current List</a>
+    <a href="{{ url_for('add_entry') }}">Add a New Task</a>
+
+
+</body>
+
+</html lang="en">
+

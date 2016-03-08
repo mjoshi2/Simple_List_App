@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Simple List App</title>
+</head>
+
+<body>
+    
+<ul class=entries>
+  {% for entry in entries %}
+    <li style='font-family: Arial'><h3 style='font-family: Arial'>{{ entry.description }}</h3>{{ entry.to_be_done_by }}
+    <a href="{{ url_for('del_entry', item_no = entry.item_no) }}"; style='float: right'>Delete entry</a>
+    {% else %}
+    <p><em>Yay you are all caught up! Good job!</em></p>
+    {% endfor %}
+</ul>
+
+    <form method="link" action="{{ url_for('clear_list') }}" style='text-align: left'>
+    <input type=submit value=Clear_All>
+    </form>
+
+   <p>Want to add a new task?</p>
+
+  {% if error %}<p class=error>Error: {{ error }}{% endif %}
+   
+    <form action="{{ url_for('add_entry') }}" method=post class=add-entry style='text-align: center'>
+      <dl>
+        <dt>Description:
+        <dd><input type=text size=100 name=description>
+        <dt>To be done by:
+        <dd><input type=text size=50 name=to_be_done_by>
+        <dd><input type=submit value=Add>
+        
+      </dl>
+      
+    </form>
+
+
+</body>
+
+</html lang="en">
+
